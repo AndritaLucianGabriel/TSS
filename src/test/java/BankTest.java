@@ -1,13 +1,6 @@
 import mainClasses.*;
-import operations.Provider;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import service.dbResources.service.BankService;
 import service.exceptions.*;
-import service.files.WriterFiles;
-
-import static junit.framework.TestCase.*;
 
 public class BankTest {
 

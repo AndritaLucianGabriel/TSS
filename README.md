@@ -1,6 +1,7 @@
 # BankingApp
 ## **Author: Andrita Lucian-Gabriel**
 ## **Date: 10-05-2021**
+## **mvn test-compile org.pitest:pitest-maven:mutationCoverage**
 ## **Operations Package**
 #### *1. Provider*
  The class stores information about the registered providers at the bank.

@@ -11,7 +11,7 @@ import service.exceptions.TransactionException;
 import service.Timestamp;
 import service.FormatDouble;
 import service.validations.BankAccountValidation;
-import javafx.util.Pair;
+import java.util.AbstractMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -191,7 +191,7 @@ public abstract class BankAccount {
 
     protected boolean currencyExchange(String wantedCurrency) {
         Timestamp.timestamp("BankAccount,currencyExchange");
-        Pair<Double, String> doubleStringPair = CurrencyExchange.exchangeBankAccount(this.balance, this.currency, wantedCurrency);
+        AbstractMap.SimpleEntry<Double, String> doubleStringPair = CurrencyExchange.exchangeBankAccount(this.balance, this.currency, wantedCurrency);
         if(doubleStringPair.getKey() != -1) {
             this.balance = doubleStringPair.getKey();
             this.currency = doubleStringPair.getValue();
@@ -204,7 +204,7 @@ public abstract class BankAccount {
 
     protected boolean currencyExchange(String wantedCurrency, Map<Client, List<BankAccount>> map) throws BankAccountException {
         Timestamp.timestamp("BankAccount,currencyExchange");
-        Pair<Double, String> doubleStringPair = CurrencyExchange.exchangeBankAccount(this.balance, this.currency, wantedCurrency);
+        AbstractMap.SimpleEntry<Double, String> doubleStringPair = CurrencyExchange.exchangeBankAccount(this.balance, this.currency, wantedCurrency);
         if(doubleStringPair.getKey() != -1.0) {
             this.balance = doubleStringPair.getKey();
             this.currency = doubleStringPair.getValue();

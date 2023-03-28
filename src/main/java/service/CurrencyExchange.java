@@ -1,8 +1,8 @@
 package service;
 
-import javafx.util.Pair;
 import service.dbResources.service.BankService;
 
+import java.util.AbstractMap;
 import java.util.Objects;
 
 public interface CurrencyExchange {
@@ -23,14 +23,14 @@ public interface CurrencyExchange {
         return local;
     }
 
-    static Pair<Double, String> exchangeBankAccount(double value, String baseCurrency, String wantedCurrency) {
+    static AbstractMap.SimpleEntry<Double, String> exchangeBankAccount(double value, String baseCurrency, String wantedCurrency) {
         Timestamp.timestamp("CurrencyExchange,exchangeBankAccount");
         Integer[] local = searchByCurrency(baseCurrency, wantedCurrency);
         if(local[0] != -1 && local[1] != -1) {
             System.out.println("\tExchangeRate: " + FormatDouble.format(exchangeRates[local[0]][local[1]]));
-            return new Pair<>(value * exchangeRates[local[0]][local[1]], wantedCurrency);
+            return new AbstractMap.SimpleEntry<>(value * exchangeRates[local[0]][local[1]], wantedCurrency);
         }
-        return new Pair<>(-1.0, "");
+        return new AbstractMap.SimpleEntry<>(-1.0, "");
     }
 
     static double convertTransfer(double value, String baseCurrency, String wantedCurrency) {

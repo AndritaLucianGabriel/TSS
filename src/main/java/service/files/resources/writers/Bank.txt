@@ -392,7 +392,7 @@ COUNTER IMPRUMUTURI: 3
 		[1] Banca Raiffeisen Bank cu ID-ul 1 aflata la Strada Sebastian Nr 5 Sector 3 Bucuresti are urmatorii clienti:
 	Vadim Tudor in varsta de 60 ani, CNP: 5980926460187
   ->CONTURI:
-[1] Contul de debit RO59RZBR0000065122344800 a fost deschis in data de 12-09-2021, avand suma de 22000.0 Lei
+[1] Contul de debit RO59RZBR0000065122344800 a fost deschis in data de 12-09-2021, avand suma de 5280.0 Dolari
  ~ Cardul 5213512152346781 cu pinul 905 a fost emis la data de 25-09-2020.
  ~ Cardul 5113512652346763 cu pinul 524 a fost emis la data de 10-05-2019.
 [2] Contul de debit RO59RZBR0000068222375802 a fost deschis in data de 15-05-2012, avand suma de 11812.0 Dolari
@@ -422,7 +422,7 @@ COUNTER IMPRUMUTURI: 3
 		[1] Banca Raiffeisen Bank cu ID-ul 1 aflata la Strada Sebastian Nr 5 Sector 3 Bucuresti are urmatorii clienti:
 	Vadim Tudor in varsta de 60 ani, CNP: 5980926460187
   ->CONTURI:
-[1] Contul de debit RO59RZBR0000065122344800 a fost deschis in data de 12-09-2021, avand suma de 3370.0 Lei
+[1] Contul de debit RO59RZBR0000065122344800 a fost deschis in data de 12-09-2021, avand suma de 780.0 Dolari
  ~ Cardul 5213512152346781 cu pinul 905 a fost emis la data de 25-09-2020.
  ~ Cardul 5113512652346763 cu pinul 524 a fost emis la data de 10-05-2019.
 [2] Contul de debit RO59RZBR0000068222375802 a fost deschis in data de 15-05-2012, avand suma de 11812.0 Dolari
@@ -452,7 +452,7 @@ COUNTER IMPRUMUTURI: 3
 		[1] Banca Raiffeisen Bank cu ID-ul 1 aflata la Strada Sebastian Nr 5 Sector 3 Bucuresti are urmatorii clienti:
 	Vadim Tudor in varsta de 60 ani, CNP: 5980926460187
   ->CONTURI:
-[1] Contul de debit RO59RZBR0000065122344800 a fost deschis in data de 12-09-2021, avand suma de 3370.0 Lei
+[1] Contul de debit RO59RZBR0000065122344800 a fost deschis in data de 12-09-2021, avand suma de 780.0 Dolari
  ~ Cardul 5213512152346781 cu pinul 905 a fost emis la data de 25-09-2020.
  ~ Cardul 5113512652346763 cu pinul 524 a fost emis la data de 10-05-2019.
 [2] Contul de debit RO59RZBR0000068222375802 a fost deschis in data de 15-05-2012, avand suma de 11812.0 Dolari

@@ -54,7 +54,7 @@ public class WriterFiles {
     public void writerAccountStatementTemp(String IBAN, String text) {
         try {
             Timestamp.timestamp("WriterFiles,writerAccountStatementTemp");
-            BufferedWriter accountStatementTempWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\service\\files\\resources\\accountStatementTemp\\" + IBAN + ".csv", true));
+            BufferedWriter accountStatementTempWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\main\\java\\service\\files\\resources\\accountStatementTemp\\" + IBAN + ".csv", true));
             accountStatementTempWriter.write(text);
             accountStatementTempWriter.close();
         } catch (IOException e) {

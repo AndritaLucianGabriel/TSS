@@ -192,7 +192,7 @@ public abstract class BankAccount {
     protected boolean currencyExchange(String wantedCurrency) {
         Timestamp.timestamp("BankAccount,currencyExchange");
         AbstractMap.SimpleEntry<Double, String> doubleStringPair = CurrencyExchange.exchangeBankAccount(this.balance, this.currency, wantedCurrency);
-        if(doubleStringPair.getKey() != -1) {
+        if(doubleStringPair.getKey() != -1.0) {
             this.balance = doubleStringPair.getKey();
             this.currency = doubleStringPair.getValue();
             BankService.getInstance().setBalance(this.balance, this.IBAN);
@@ -208,8 +208,9 @@ public abstract class BankAccount {
         if(doubleStringPair.getKey() != -1.0) {
             this.balance = doubleStringPair.getKey();
             this.currency = doubleStringPair.getValue();
-            BankService.getInstance().setBalance(this.balance, this.IBAN);
-            BankService.getInstance().setCurrency(this.currency, this.IBAN);
+            //REEEEEE
+//            BankService.getInstance().setBalance(this.balance, this.IBAN);
+//            BankService.getInstance().setCurrency(this.currency, this.IBAN);
             for (Client client: map.keySet()) {
                 for(BankAccount b: map.get(client)) {
                     b.setCurrency(this.currency);

@@ -43,7 +43,10 @@ public interface CurrencyExchange {
     static double convertTransferWithoutText(double value, String baseCurrency, String wantedCurrency) {
         Timestamp.timestamp("CurrencyExchange,convertTransferWithoutText");
         Integer[] local = searchByCurrency(baseCurrency, wantedCurrency);
-        return value * exchangeRates[local[1]][local[0]];
+        if(local[0] != -1 && local[1] != -1) {
+            return value * exchangeRates[local[1]][local[0]];
+        }
+        return 0.0;
     }
 
 }

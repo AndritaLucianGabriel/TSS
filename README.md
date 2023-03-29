@@ -1,6 +1,7 @@
 # BankingApp
 ## **Author: Andrita Lucian-Gabriel**
 ## **Date: 10-05-2021**
+## **mvn clean verify**
 ## **mvn test-compile org.pitest:pitest-maven:mutationCoverage**
 ## **Operations Package**
 #### *1. Provider*

@@ -107,15 +107,18 @@ public class Loan {
         return this.value / this.durationMonths;
     }
 
-    protected void payMonthlyRate(double value, String cnp) {
+    public void payMonthlyRate(double value, String cnp) {
         Timestamp.timestamp("Loan,payMonthlyRate");
         if (value >= this.valueMonthlyRate()) {
             double oldRate = valueMonthlyRate();
             this.value = this.value - value;
             double newRate = valueMonthlyRate();
             this.durationMonths--;
-            System.out.println(" a platit " + FormatDouble.format(value) + " " + this.currency + ".\n" + " ~Update rata: " + FormatDouble.format(oldRate) + " -> " + FormatDouble.format(newRate) + "\n ~" + FormatDouble.format(this.value) + " " + this.currency + " ramasi pentru " + this.durationMonths + " de luni");
-            BankService.getInstance().updateLoan(this, cnp);
+            System.out.println(" a platit " + FormatDouble.format(value) + " " + this.currency + ".\n" + " ~Update rata: " + FormatDouble.format(oldRate) +
+                    " -> " + FormatDouble.format(newRate) + "\n ~" + FormatDouble.format(this.value) + " " + this.currency + " ramasi pentru " +
+                    this.durationMonths + " de luni");
+            //REEEEEEEE
+//            BankService.getInstance().updateLoan(this, cnp);
         } else
             System.out.println(" trebuie sa introduca o suma mai mare decat " + FormatDouble.format(this.valueMonthlyRate()) + " pentru a plati minimul ratei.");
     }

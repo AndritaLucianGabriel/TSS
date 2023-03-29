@@ -537,9 +537,9 @@ public class Bank implements AccountStatement {
                         Objects.requireNonNull(dupeSender).getIBAN() + " a fost inchis!");              // 27
             else if (c2 != 0)                                                                           // 28
                 System.out.println("Nu se poate face transferul! Ambele conturi au fost inchise!");     // 29
-            else if (c != 0 && c1 == 0)                                                                 // 30
+            else if (c1 != 0 && c == 0)                                                                 // 30
                 System.out.println("Nu exista contul in care transferati");                             // 31
-            else if (c1 != 0 && c == 0)                                                                 // 32
+            else if (c != 0 && c1 == 0)                                                                 // 32
                 System.out.println("Nu exista contul din care transferati");                            // 33
             else if (k == 0)                                                                            // 34
                 System.out.println("Nu exista nici un cont");                                           // 35

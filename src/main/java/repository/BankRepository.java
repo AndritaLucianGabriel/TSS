@@ -6,10 +6,8 @@ import service.exceptions.BankException;
 import service.validations.BankValidation;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.Executor;
 
 public class BankRepository {
     private final CardRepository cardRepository = new CardRepository();
@@ -21,7 +19,7 @@ public class BankRepository {
         try {
             Timestamp.timestamp("BankRepository,getConnection");
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "root");
-        } catch (SQLException throwables) {
+            } catch (Exception throwables) {
             throw new RuntimeException("Nu se poate conecta la baza de date.");
         }
     }

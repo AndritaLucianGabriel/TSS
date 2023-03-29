@@ -1,3 +1,5 @@
+package tests;
+
 import mainClasses.*;
 import org.junit.Test;
 import service.exceptions.*;
@@ -66,6 +68,11 @@ public class BankTest {
 
         bank.currencyExchange(bankBankAccount, "Lei");
         System.out.println(bank);
+    }
+
+    @Test
+    public void testCurrencyExchange_C111 () throws BankAccountException, BankException {
+
     }
 
     /*

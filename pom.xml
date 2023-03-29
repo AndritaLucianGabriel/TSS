@@ -40,8 +40,11 @@
                 <version>1.5.2</version>
                 <configuration>
                     <targetClasses>
-                        <param>operations.ToProviders</param>
+                        <param>mainClasses.Bank</param>
                     </targetClasses>
+                    <targetTests>
+                        <param>tests.BankTest</param>
+                    </targetTests>
                 </configuration>
                 <executions>
                     <execution>

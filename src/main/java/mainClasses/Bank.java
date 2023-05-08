@@ -632,7 +632,15 @@ public class Bank implements AccountStatement {
                         c1++;
                     else {
                         System.out.print("\tClientul " + x.getKey().getFirstName() + " " + x.getKey().getLastName());
-                        y.paymentUtilies(Receiver, value);
+                        for(Provider prov: ToProviders.getProviderDBList()) {
+                            if(prov.getIBAN().equals(Receiver)) {
+                                y.paymentUtilies(Receiver, value);
+                            }
+                            else {
+                                System.out.println("Nu exista providerul cu " + Receiver + ".");
+                                return;
+                            }
+                        }
                     }
                 }
             }
@@ -641,7 +649,6 @@ public class Bank implements AccountStatement {
             System.out.println("Nu exista contul " + Sender);
         else if (c1 != 0)
             System.out.println("Nu se poate plati providerul! Contul " + Sender + " a fost inchis!");
-
     }
 
     public void currencyExchange(BankAccount bankAccount, String wantedCurrency) throws BankAccountException {
